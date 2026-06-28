@@ -1,4 +1,4 @@
-# 🏥 Aegis Health Monitoring System
+# 🏥 Aegis mHealth Monitoring System
 
 <div align="center">
   <img src="frontend/public/images/logo-light.png" alt="Aegis Logo" width="150" />
@@ -440,12 +440,7 @@ Health Monitoring & Health API System
 
 | Avatar | Name | GitHub | Contributions |
 |--------|------|--------|---------------|
-| <img src="https://github.com/luoijin.png" width="50" hei+++++++++++++++ght="50"/> | **Anne Loraine Pardillo** | [@luoijin](https://github.com/luoijin) | Developer, Tester, Documentation |
+| <img src="https://github.com/luoijin.png" width="50" height="50"/> | **Anne Loraine Pardillo** | [@luoijin](https://github.com/luoijin) | Full Stack Dev |
 
 
 ---
-
-
-<div align="center">
-  <strong>INTPROG Group 5</strong>
-</div>
