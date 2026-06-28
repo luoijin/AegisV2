@@ -1,0 +1,149 @@
+/* frontend/src/components/features/Doctor/ReferralSystem/ReferralCard.css */
+
+.referral-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--gray-200);
+  overflow: hidden;
+}
+
+.referral-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: var(--gray-50);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.patient-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.patient-name {
+  font-weight: 600;
+  color: var(--gray-900);
+}
+
+.priority-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.priority-emergency {
+  background: var(--danger-bg);
+  color: var(--danger);
+}
+
+.priority-urgent {
+  background: var(--warning-bg);
+  color: var(--warning);
+}
+
+.priority-normal {
+  background: var(--info-bg);
+  color: var(--info);
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.status-accepted {
+  color: var(--success);
+}
+.status-denied {
+  color: var(--danger);
+}
+.status-pending {
+  color: var(--warning);
+}
+
+.referral-card-body {
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.doctor-info,
+.reason,
+.notes,
+.date {
+  font-size: 14px;
+  color: var(--gray-600);
+}
+
+.doctor-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.notes {
+  background: var(--gray-50);
+  padding: 8px 12px;
+  border-radius: var(--radius-md);
+}
+
+.date {
+  font-size: 12px;
+  color: var(--gray-400);
+}
+
+.referral-card-actions {
+  display: flex;
+  gap: 12px;
+  padding: 16px 20px;
+  background: var(--gray-50);
+  border-top: 1px solid var(--gray-200);
+}
+
+.accept-btn,
+.decline-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.accept-btn {
+  background: var(--success);
+  color: white;
+}
+
+.accept-btn:hover:not(:disabled) {
+  background: var(--success-dark, #059669);
+}
+
+.decline-btn {
+  background: var(--danger);
+  color: white;
+}
+
+.decline-btn:hover:not(:disabled) {
+  background: var(--danger-dark, #dc2626);
+}
+
+.accept-btn:disabled,
+.decline-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

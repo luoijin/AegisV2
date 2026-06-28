@@ -1,0 +1,202 @@
+/* frontend/src/components/features/Doctor/ReferralSystem/SendReferralModal.css */
+
+.doctor-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.doctor-modal-container {
+  background: white;
+  border-radius: var(--radius-lg);
+  width: 500px;
+  max-width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-lg);
+}
+
+.doctor-modal-md {
+  width: 500px;
+}
+
+.doctor-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.doctor-modal-header h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--gray-900);
+  margin: 0;
+}
+
+.doctor-close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--gray-500);
+  padding: 4px;
+  border-radius: var(--radius-sm);
+}
+
+.doctor-close-btn:hover {
+  background: var(--gray-100);
+}
+
+.doctor-modal-form {
+  padding: 24px;
+}
+
+.doctor-form-group {
+  margin-bottom: 20px;
+}
+
+.doctor-form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gray-600);
+  margin-bottom: 8px;
+}
+
+.doctor-required {
+  color: var(--danger);
+}
+
+.doctor-form-group select,
+.doctor-form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-family: inherit;
+  background: white;
+}
+
+.doctor-form-group select:focus,
+.doctor-form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.doctor-form-group select:disabled,
+.doctor-form-group textarea:disabled {
+  background: var(--gray-50);
+  cursor: not-allowed;
+}
+
+.doctor-priority-options {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.doctor-priority-option {
+  padding: 8px 16px;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  background: white;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gray-600);
+}
+
+.doctor-priority-option.selected {
+  border-color: transparent;
+}
+
+.doctor-priority-option.selected.normal {
+  background: var(--info-bg);
+  color: var(--info);
+  border-color: var(--info);
+}
+
+.doctor-priority-option.selected.urgent {
+  background: var(--warning-bg);
+  color: var(--warning);
+  border-color: var(--warning);
+}
+
+.doctor-priority-option.selected.emergency {
+  background: var(--danger-bg);
+  color: var(--danger);
+  border-color: var(--danger);
+}
+
+.doctor-priority-option:hover:not(:disabled) {
+  background: var(--gray-100);
+}
+
+.doctor-priority-option:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.doctor-error-message {
+  background: var(--danger-bg);
+  border: 1px solid var(--danger);
+  color: var(--danger);
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.doctor-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.doctor-cancel-btn,
+.doctor-submit-btn {
+  padding: 8px 20px;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.doctor-cancel-btn {
+  background: none;
+  border: 1px solid var(--gray-200);
+  color: var(--gray-600);
+}
+
+.doctor-cancel-btn:hover {
+  background: var(--gray-100);
+}
+
+.doctor-submit-btn {
+  background: var(--accent);
+  border: none;
+  color: white;
+}
+
+.doctor-submit-btn:hover:not(:disabled) {
+  background: var(--accent-dark);
+}
+
+.doctor-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

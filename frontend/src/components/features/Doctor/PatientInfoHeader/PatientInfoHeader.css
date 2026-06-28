@@ -1,0 +1,248 @@
+/* frontend/src/components/features/Doctor/PatientInfoHeader/PatientInfoHeader.css */
+
+.offline-banner-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--warning-bg);
+  color: var(--warning);
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  margin-bottom: 16px;
+  font-size: 12px;
+  border: 1px solid var(--warning);
+}
+
+.patient-info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--gray-200);
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.patient-details {
+  flex: 1;
+}
+
+.patient-details h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 4px;
+}
+
+.patient-details p {
+  color: var(--gray-500);
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.blood-type-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--gray-100);
+  flex-wrap: wrap;
+}
+
+.blood-type-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--gray-500);
+}
+
+.blood-type-label svg {
+  color: var(--accent);
+}
+
+.blood-type-display {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.blood-type-value {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gray-900);
+  background: var(--info-bg);
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.edit-blood-type-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 11px;
+  color: var(--accent);
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+}
+
+.edit-blood-type-btn:hover:not(:disabled) {
+  background: var(--info-bg);
+}
+
+.edit-blood-type-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.blood-type-edit {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.blood-type-select {
+  padding: 6px 10px;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  background: white;
+  cursor: pointer;
+}
+
+.blood-type-select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.blood-type-select:disabled {
+  background: var(--gray-50);
+  cursor: not-allowed;
+}
+
+.blood-type-action {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+}
+
+.blood-type-action.save {
+  color: var(--success);
+}
+
+.blood-type-action.save:hover:not(:disabled) {
+  background: var(--success-bg);
+}
+
+.blood-type-action.cancel {
+  color: var(--danger);
+}
+
+.blood-type-action.cancel:hover:not(:disabled) {
+  background: var(--danger-bg);
+}
+
+.blood-type-action:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.patient-header-buttons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.record-vitals-btn,
+.view-chart-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.record-vitals-btn {
+  background: var(--accent);
+  border: none;
+  color: white;
+}
+
+.record-vitals-btn:hover:not(:disabled) {
+  background: var(--accent-dark);
+}
+
+.view-chart-btn {
+  background: white;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+
+.view-chart-btn:hover:not(:disabled) {
+  background: var(--info-bg);
+  border-color: var(--accent-dark);
+}
+
+.record-vitals-btn:disabled,
+.view-chart-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Toast – no animation */
+.patient-info-toast {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  padding: 12px 20px;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 500;
+  z-index: 10000;
+  box-shadow: var(--shadow-md);
+}
+
+.patient-info-toast.success {
+  background: var(--success-bg);
+  border: 1px solid var(--success);
+  color: var(--success);
+}
+
+.patient-info-toast.error {
+  background: var(--danger-bg);
+  border: 1px solid var(--danger);
+  color: var(--danger);
+}
+
+@media (max-width: 768px) {
+  .patient-info-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .patient-header-buttons {
+    width: 100%;
+    justify-content: stretch;
+  }
+  .record-vitals-btn,
+  .view-chart-btn {
+    flex: 1;
+    justify-content: center;
+  }
+  .patient-info-toast {
+    left: 20px;
+    right: 20px;
+    top: 70px;
+    text-align: center;
+  }
+}

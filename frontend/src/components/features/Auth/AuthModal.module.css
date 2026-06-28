@@ -1,0 +1,250 @@
+/* frontend/src/components/features/Auth/AuthModal.module.css */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  position: relative;
+  background: white;
+  width: 100%;
+  max-width: 480px;
+  border-radius: var(--radius-xl);
+  padding: 48px 40px 40px 40px;  /* Increased top padding to accommodate close button */
+  box-shadow: var(--shadow-lg);
+}
+
+.closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--gray-400);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+}
+
+.closeBtn:hover {
+  color: var(--danger);
+  background: var(--danger-bg);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 24px;  /* added space below header */
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+}
+
+.toggle {
+  display: flex;
+  gap: 12px;
+  background: var(--gray-100);
+  padding: 6px;
+  border-radius: var(--radius-lg);
+  margin-bottom: 32px;  /* more space before form */
+  justify-content: center;
+}
+
+.toggleBtn {
+  flex: 1;
+  padding: 12px 20px;  /* taller buttons */
+  border: none;
+  background: transparent;
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--gray-500);
+  cursor: pointer;
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.toggleBtn.active {
+  background: white;
+  color: var(--gray-900);
+  box-shadow: var(--shadow-sm);
+}
+
+.inputGroup {
+  margin-bottom: 24px;  /* more space between fields */
+}
+
+.inputGroup label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-700);
+}
+
+.input {
+  width: 100%;
+  padding: 14px 16px;  /* taller inputs */
+  font-size: 14px;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  outline: none;
+}
+
+.input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.inputIcon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputIcon svg {
+  position: absolute;
+  left: 14px;
+  color: var(--gray-400);
+}
+
+.inputIcon input {
+  padding-left: 44px;
+}
+
+.nameRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 16px;  /* taller button */
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.submitBtn:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.alertError,
+.alertSuccess {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  border-radius: var(--radius-lg);
+  margin-bottom: 24px;
+  font-size: 13px;
+  text-align: left;
+}
+
+.alertError {
+  background: var(--danger-bg);
+  color: var(--danger);
+  border-left: 3px solid var(--danger);
+}
+
+.alertSuccess {
+  background: var(--success-bg);
+  color: var(--success);
+  border-left: 3px solid var(--success);
+}
+
+.registerNote {
+  font-size: 12px;
+  color: var(--gray-500);
+  margin-bottom: 24px;
+  padding: 14px;
+  background: var(--gray-50);
+  border-radius: var(--radius-lg);
+  line-height: 1.6;
+}
+
+.footer {
+  margin-top: 32px;
+  text-align: center;
+  padding-top: 24px;
+  border-top: 1px solid var(--gray-200);
+}
+
+.footer p {
+  font-size: 13px;
+  color: var(--gray-500);
+}
+
+.switchBtn {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 6px;
+}
+
+.switchBtn:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .modal {
+    margin: 20px;
+    padding: 32px 24px 32px 24px;
+  }
+  .title {
+    font-size: 28px;
+  }
+  .nameRow {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .toggleBtn {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+  .submitBtn {
+    padding: 14px;
+  }
+}

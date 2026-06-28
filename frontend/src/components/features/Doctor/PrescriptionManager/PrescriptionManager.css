@@ -1,0 +1,329 @@
+/* PrescriptionManager.css - No animations, no avatars, blue theme */
+
+.prescription-manager {
+  padding: 24px;
+  background: var(--gray-50);
+  min-height: 100%;
+}
+
+/* Offline banner */
+.offline-banner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--warning-bg);
+  color: var(--warning);
+  padding: 10px 16px;
+  border-radius: var(--radius-md);
+  margin-bottom: 20px;
+  font-size: 13px;
+  border: 1px solid var(--warning);
+}
+
+/* Header */
+.prescription-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.prescription-header h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 8px;
+}
+
+.prescription-header p {
+  color: var(--gray-500);
+  font-size: 14px;
+}
+
+.create-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: var(--accent);
+  border: none;
+  border-radius: var(--radius-md);
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.create-btn:hover:not(:disabled) {
+  background: var(--accent-dark);
+}
+
+.create-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid var(--gray-200);
+}
+
+.stat-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.stat-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--gray-900);
+}
+
+.stat-label {
+  font-size: 12px;
+  color: var(--gray-500);
+}
+
+/* Prescription card */
+.prescription-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--gray-200);
+  overflow: hidden;
+}
+
+.prescription-card.inactive {
+  background: var(--gray-50);
+  opacity: 0.85;
+}
+
+/* Card header */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: var(--gray-50);
+  border-bottom: 1px solid var(--gray-200);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.patient-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* No avatar styles - only patient name */
+.patient-name {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--gray-900);
+  margin-bottom: 4px;
+}
+
+.prescription-date {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: var(--gray-400);
+}
+
+/* Badges & actions */
+.completed-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  background: var(--gray-100);
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--gray-500);
+}
+
+.card-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.action-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: white;
+  border: 1px solid var(--gray-200);
+  color: var(--gray-500);
+}
+
+.action-btn.download:hover {
+  background: var(--success-bg);
+  border-color: var(--success);
+  color: var(--success);
+}
+
+/* Card body */
+.card-body {
+  padding: 16px 20px;
+}
+
+.medications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.medication-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--gray-100);
+  flex-wrap: wrap;
+}
+
+.med-name {
+  font-weight: 600;
+  color: var(--gray-900);
+  min-width: 120px;
+}
+
+.med-dosage {
+  color: var(--gray-600);
+  min-width: 80px;
+}
+
+.med-frequency {
+  color: var(--gray-500);
+}
+
+.more-meds {
+  font-size: 12px;
+  color: var(--accent);
+  margin-top: 4px;
+}
+
+.prescription-notes {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--gray-100);
+  font-size: 13px;
+  color: var(--gray-500);
+}
+
+/* Card footer */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: var(--gray-50);
+  border-top: 1px solid var(--gray-200);
+  font-size: 12px;
+}
+
+.refills {
+  color: var(--gray-500);
+}
+
+.doctor-name {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+/* Empty state */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--gray-200);
+  color: var(--gray-400);
+}
+
+.empty-state svg {
+  margin-bottom: 12px;
+  color: var(--gray-300);
+}
+
+/* Toast notifications - no animations */
+.success-toast,
+.error-toast {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  padding: 12px 16px;
+  border-radius: var(--radius-lg);
+  font-size: 13px;
+  z-index: 1000;
+  box-shadow: var(--shadow-md);
+}
+
+.success-toast {
+  background: var(--success-bg);
+  border: 1px solid var(--success);
+  color: var(--success);
+}
+
+.error-toast {
+  background: var(--danger-bg);
+  border: 1px solid var(--danger);
+  color: var(--danger);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .prescription-manager {
+    padding: 16px;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .card-badges {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .medication-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .success-toast,
+  .error-toast {
+    left: 20px;
+    right: 20px;
+    top: 70px;
+  }
+}

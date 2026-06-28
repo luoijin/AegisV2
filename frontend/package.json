@@ -1,0 +1,48 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^1.18.1",
+    "chart.js": "^4.5.1",
+    "dotenv": "^16.4.5",
+    "firebase": "^10.13.0",
+    "framer-motion": "^12.38.0",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^4.2.1",
+    "jwt-decode": "^4.0.0",
+    "lucide-react": "^1.21.0",
+    "react": "^19.2.5",
+    "react-chartjs-2": "^5.3.1",
+    "react-dom": "^19.2.5",
+    "react-hot-toast": "^2.6.0",
+    "react-router-dom": "^7.18.0",
+    "react-scripts": "5.0.1",
+    "recharts": "^3.9.0",
+    "socket.io-client": "^4.7.5",
+    "sweetalert2": "^11.26.24"
+  },
+  "scripts": {
+    "prestart": "node scripts/generate-firebase-config.js",
+    "start": "react-scripts start",
+    "prebuild": "node scripts/generate-firebase-config.js",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

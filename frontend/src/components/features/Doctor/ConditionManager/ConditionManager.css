@@ -1,0 +1,380 @@
+/* ConditionManager.css - Only component-specific styles */
+/* Modal styles are handled by ../../../../styles/modal.css */
+
+/* Main Card */
+.condition-manager-card {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #E2E8F0;
+  overflow: hidden;
+}
+
+/* Card Header */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: #F8FAFC;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-title svg {
+  color: #3B82F6;
+}
+
+.header-title h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #0A0F1D;
+  margin: 0;
+}
+
+.condition-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  height: 24px;
+  padding: 0 6px;
+  background: #E2E8F0;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #475569;
+  margin-left: 8px;
+}
+
+/* Add Button */
+.add-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 34px;
+  height: 34px;
+  background: white;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  color: #64748B;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.add-icon-btn:hover {
+  background: #EFF6FF;
+  border-color: #3B82F6;
+  color: #3B82F6;
+  transform: translateY(-1px);
+}
+
+/* Conditions Container */
+.conditions-container {
+  padding: 16px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #64748B;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+/* Condition Item */
+.condition-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 14px;
+  /* background: #F8FAFC; */
+  border-radius: 10px;
+  margin-bottom: 8px;
+  transition: all 0.2s;
+}
+
+.condition-item:hover {
+  background: #F1F5F9;
+}
+
+/* Condition Content */
+.condition-content {
+  flex: 1;
+}
+
+.condition-name {
+  font-weight: 600;
+  font-size: 14px;
+  color: #0A0F1D;
+  margin-bottom: 6px;
+}
+
+.condition-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Severity Badge */
+.severity-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.diagnosed-date {
+  font-size: 11px;
+  color: #64748B;
+}
+
+/* Condition Actions */
+.condition-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.severity-select {
+  padding: 6px 10px;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.severity-select:hover {
+  border-color: #3B82F6;
+}
+
+.resolve-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+  color: #64748B;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.resolve-btn:hover {
+  background: #D1FAE5;
+  color: #10B981;
+}
+
+/* Resolved Section */
+.resolved-section {
+  margin-top: 20px;
+}
+
+.section-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  color: #475569;
+  transition: all 0.2s;
+  margin-bottom: 12px;
+}
+
+.section-toggle:hover {
+  background: #F1F5F9;
+}
+
+.toggle-icon {
+  margin-left: auto;
+  font-size: 10px;
+}
+
+.resolved-list {
+  opacity: 0.8;
+}
+
+.condition-item.resolved {
+  background: #F1F5F9;
+}
+
+.condition-item.resolved .condition-name {
+  text-decoration: line-through;
+}
+
+.reactivate-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+  color: #3B82F6;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.reactivate-btn:hover {
+  background: #EFF6FF;
+}
+
+/* Empty State */
+.empty-conditions {
+  text-align: center;
+  padding: 40px 20px;
+  color: #94A3B8;
+}
+
+.empty-conditions svg {
+  color: #CBD5E1;
+  margin-bottom: 12px;
+}
+
+.empty-conditions p {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.empty-conditions span {
+  font-size: 12px;
+}
+
+/* Updating Badge */
+.updating-badge {
+  font-size: 11px;
+  color: #3B82F6;
+  font-style: italic;
+}
+
+.refreshing-badge {
+  font-size: 11px;
+  color: #3B82F6;
+  background: #EFF6FF;
+  padding: 2px 8px;
+  border-radius: 12px;
+  margin-left: 8px;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .condition-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .condition-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  
+  .severity-select {
+    flex: 1;
+  }
+}
+
+/* Add to ConditionManager.css for severity options */
+.doctor-severity-options {
+  display: flex;
+  gap: 12px;
+}
+
+.doctor-severity-option {
+  flex: 1;
+  padding: 10px 12px;
+  background: white;
+  border: 2px solid #E2E8F0;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  color: #64748B;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.doctor-severity-option:hover {
+  border-color: #CBD5E1;
+  background: #F8FAFC;
+}
+
+.doctor-severity-option.selected {
+  border-color: #3B82F6;
+  background: #EFF6FF;
+  color: #3B82F6;
+}
+
+.doctor-severity-option.selected.mild {
+  border-color: #10B981;
+  background: #D1FAE5;
+  color: #059669;
+}
+
+.doctor-severity-option.selected.moderate {
+  border-color: #F59E0B;
+  background: #FEF3C7;
+  color: #D97706;
+}
+
+.doctor-severity-option.selected.severe {
+  border-color: #EF4444;
+  background: #FEE2E2;
+  color: #DC2626;
+}
+
+/* Add to ConditionManager.css */
+
+.success-message {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: #dcfce7;
+  border: 1px solid #bbf7d0;
+  border-radius: 10px;
+  color: #166534;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+.error-message {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  color: #dc2626;
+  font-size: 13px;
+  margin-bottom: 16px;
+}

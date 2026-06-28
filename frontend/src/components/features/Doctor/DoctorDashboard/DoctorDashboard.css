@@ -1,0 +1,355 @@
+/* frontend/src/components/features/Doctor/DoctorDashboard/DoctorDashboard.css */
+
+.doctor-dashboard {
+  min-height: 100vh;
+  background: #f8fafc;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-body {
+  display: flex;
+  flex: 1;
+  background: #f8fafc;
+}
+
+/* Sidebar (desktop only) */
+.dashboard-sidebar {
+  width: 280px;
+  background: white;
+  border-right: 1px solid #e2e8f0;
+  position: sticky;
+  top: 70px;
+  height: calc(100vh - 70px);
+  overflow-y: auto;
+  flex-shrink: 0;
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .dashboard-sidebar {
+    display: none !important;
+  }
+}
+
+/* Main content */
+.main-content-area {
+  flex: 1;
+  padding: 20px;
+  background: #f8fafc;
+  min-height: 100%;
+  overflow-x: auto;
+}
+
+@media (min-width: 640px) {
+  .main-content-area {
+    padding: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-content-area {
+    padding: 28px;
+  }
+}
+
+/* Mobile patient selector (dropdown card) */
+.mobile-patient-selector {
+  background: white;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.mobile-selector-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.mobile-selector-header svg {
+  color: #3b82f6;
+}
+
+.mobile-selector-header h3 {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0;
+}
+
+.mobile-selector-dropdown {
+  position: relative;
+  width: 100%;
+}
+
+/* Custom styled select */
+.mobile-patient-dropdown-full {
+  width: 100%;
+  padding: 12px 40px 12px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #0f172a;
+  background: white;
+  appearance: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.mobile-patient-dropdown-full:hover {
+  border-color: #cbd5e1;
+  background: #f8fafc;
+}
+
+.mobile-patient-dropdown-full:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Custom dropdown arrow */
+.dropdown-icon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  pointer-events: none;
+  transition: color 0.2s;
+}
+
+.mobile-selector-dropdown:hover .dropdown-icon {
+  color: #3b82f6;
+}
+
+/* ============================================ */
+/* IMPROVED DROPDOWN OPTIONS STYLING */
+/* ============================================ */
+
+/* Option styling */
+.mobile-patient-dropdown-full option {
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #334155;
+  background: white;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.mobile-patient-dropdown-full option:last-of-type {
+  border-bottom: none;
+}
+
+/* Selected option styling */
+.mobile-patient-dropdown-full option:checked {
+  background: #eff6ff;
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+/* Hover effect on options */
+.mobile-patient-dropdown-full option:hover {
+  background: #f8fafc;
+}
+
+/* Placeholder option styling */
+.mobile-patient-dropdown-full option[value=""] {
+  color: #94a3b8;
+  font-style: italic;
+}
+
+/* When a valid patient is selected */
+.mobile-patient-dropdown-full:has(option:checked:not([value=""])) {
+  border-color: #3b82f6;
+  background: #fafcff;
+  font-weight: 600;
+}
+
+/* Custom scrollbar for dropdown options */
+.mobile-patient-dropdown-full {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 #f1f5f9;
+}
+
+.mobile-patient-dropdown-full::-webkit-scrollbar {
+  width: 6px;
+}
+
+.mobile-patient-dropdown-full::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 10px;
+}
+
+.mobile-patient-dropdown-full::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+.mobile-patient-dropdown-full::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Show/hide mobile selector */
+@media (min-width: 768px) {
+  .mobile-patient-selector {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .mobile-patient-selector {
+    display: block;
+  }
+  .main-content-area {
+    padding: 16px;
+  }
+}
+
+/* Patient dashboard grid */
+.patient-dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+  .patient-dashboard-grid {
+    grid-template-columns: 1fr 380px;
+  }
+}
+
+.vitals-column {
+  min-width: 0;
+}
+
+.conditions-column {
+  align-self: start;
+}
+
+/* No selection state */
+.no-selection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  background: white;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+}
+
+/* Vitals styling overrides */
+.doctor-dashboard .vital-value {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: #0a0f1d !important;
+  line-height: 1.2 !important;
+}
+
+.doctor-dashboard .vital-value span {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  color: #94a3b8 !important;
+}
+
+.doctor-dashboard .vital-label {
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  color: #64748b !important;
+  margin-bottom: 4px !important;
+}
+
+/* Scrollbar styles (global) */
+.doctor-dashboard ::-webkit-scrollbar,
+.main-content-area::-webkit-scrollbar,
+.dashboard-sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.doctor-dashboard ::-webkit-scrollbar-track,
+.main-content-area::-webkit-scrollbar-track,
+.dashboard-sidebar::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 10px;
+}
+
+.doctor-dashboard ::-webkit-scrollbar-thumb,
+.main-content-area::-webkit-scrollbar-thumb,
+.dashboard-sidebar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+.doctor-dashboard ::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Mobile patient actions */
+.mobile-patient-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Mobile patient bar */
+.mobile-patient-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+.mobile-delete-patient-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  color: #ef4444;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.mobile-delete-patient-btn:hover {
+  background: #fee2e2;
+  border-color: #fecaca;
+}
+
+/* Hide on desktop */
+@media (min-width: 768px) {
+  .mobile-patient-bar {
+    display: none !important;
+  }
+}
+
+/* Mobile add patient button */
+.mobile-add-patient-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  color: #3b82f6;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.mobile-add-patient-btn:hover {
+  background: #eff6ff;
+  border-color: #3b82f6;
+}

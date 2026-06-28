@@ -1,0 +1,236 @@
+/* frontend/src/components/features/Auth/AuthModal.css */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.auth-modal {
+  position: relative;
+  background: white;
+  width: 100%;
+  max-width: 450px;
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  box-shadow: var(--shadow-lg);
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--gray-400);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+}
+
+.modal-close:hover {
+  color: var(--danger);
+  background: var(--danger-bg);
+}
+
+.modal-header {
+  text-align: center;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.modal-title {
+  font-size: 28px;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+}
+
+/* Toggle Buttons – centered */
+.auth-toggle-modal {
+  display: flex;
+  gap: 12px;
+  background: var(--gray-100);
+  padding: 4px;
+  border-radius: var(--radius-lg);
+  margin-bottom: 24px;
+  justify-content: center;
+}
+
+.toggle-btn-modal {
+  flex: 1;
+  padding: 10px 20px;
+  border: none;
+  background: transparent;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--gray-500);
+  cursor: pointer;
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.toggle-btn-modal.active {
+  background: white;
+  color: var(--gray-900);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Form Elements */
+.input-group-modal {
+  margin-bottom: 20px;
+}
+.input-group-modal label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-700);
+}
+.input-field-modal {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 14px;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  outline: none;
+}
+.input-field-modal:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+.name-row-modal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+/* Input with icon */
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.input-with-icon svg {
+  position: absolute;
+  left: 12px;
+  color: var(--gray-400);
+}
+.input-with-icon input {
+  padding-left: 40px;
+}
+
+/* Submit Button */
+.btn-submit {
+  width: 100%;
+  padding: 14px;
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+.btn-submit:hover:not(:disabled) {
+  opacity: 0.9;
+}
+.btn-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Alerts */
+.alert-error-modal,
+.alert-success-modal {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  border-radius: var(--radius-lg);
+  margin-bottom: 20px;
+  font-size: 13px;
+  text-align: left;
+}
+.alert-error-modal {
+  background: var(--danger-bg);
+  color: var(--danger);
+  border-left: 3px solid var(--danger);
+}
+.alert-success-modal {
+  background: var(--success-bg);
+  color: var(--success);
+  border-left: 3px solid var(--success);
+}
+
+/* Register note */
+.register-note-modal {
+  font-size: 12px;
+  color: var(--gray-500);
+  margin-bottom: 20px;
+  padding: 12px;
+  background: var(--gray-50);
+  border-radius: var(--radius-lg);
+  line-height: 1.6;
+}
+
+/* Footer – centered */
+.modal-footer {
+  margin-top: 24px;
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid var(--gray-200);
+}
+.modal-footer p {
+  font-size: 13px;
+  color: var(--gray-500);
+}
+.switch-mode-btn {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 4px;
+}
+.switch-mode-btn:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .auth-modal {
+    margin: 20px;
+    padding: 24px;
+  }
+  .name-row-modal {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .modal-title {
+    font-size: 24px;
+  }
+}
