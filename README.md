@@ -395,9 +395,6 @@ Aegis/
 ```
 
 ---
-
-## 📸 Screenshots
-
 ### Landing Page
 [Landing page with hero section, features, and auth modal]
 
